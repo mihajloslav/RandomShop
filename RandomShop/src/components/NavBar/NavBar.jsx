@@ -1,18 +1,18 @@
 import React from "react";
 import "./style/NavBar.scss";
 
-const NavBar = () => {
+const NavBar = ({ setPage }) => {
   return (
-    <div className={"navbar-root"}>
-      <ul className={"navbar-wrapper"}>
+    <div className="navbar-root">
+      <ul className="navbar-wrapper">
         <li>
-          <a>SHOP</a>
+          <a onClick={() => setPage(1)}>SHOP</a>
         </li>
-        <li className={"home-button"}>
-          <a>HOME</a>
+        <li className="home-button">
+          <a onClick={() => setPage(0)}>HOME</a>
         </li>
         <li>
-          <a>CART</a>
+          <a onClick={() => setPage(2)}>CART</a>
         </li>
       </ul>
     </div>
