@@ -8,9 +8,11 @@ const Cart = () => {
   return (
     <div className="cart-root">
       <div className="cart-wrapper">
-        <h2>Vaša korpa</h2>
+        <p className="your-products">Your products:</p>
         {cart.length === 0 ? (
-          <p>Korpa je prazna.</p>
+          <div className="empty-wrapper">
+            <p></p>
+          </div>
         ) : (
           <ul className="cart-list">
             {cart.map((product) => (

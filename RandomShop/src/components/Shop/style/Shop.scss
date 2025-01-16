@@ -1,11 +1,5 @@
 .shop-root {
   flex-grow: 1;
-  /*display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 36px;
-  text-align: center;*/
 }
 .shop-wrapper {
   display: flex;
@@ -49,6 +43,7 @@
 .our-products {
   font-size: 24px;
   padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 .shop-body {
