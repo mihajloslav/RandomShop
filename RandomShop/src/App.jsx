@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div className="app-root">
-      <NavBar setPage={setPage} />
+      <NavBar page={page} setPage={setPage} />
       {page === 0 && <Home />}
       {page === 1 && <Shop />}
       {page === 2 && <Cart />}
