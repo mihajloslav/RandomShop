@@ -6,6 +6,7 @@ import { CartContext } from "../../contexts/CartContextProvider";
 
 const Shop = () => {
   const { cart } = useContext(CartContext);
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <div className="shop-root">
@@ -16,7 +17,7 @@ const Shop = () => {
             src="./cart-icon.svg"
             alt="cart icon"
           />
-          <p className="cart-count">{cart.length}</p>
+          <p className="cart-count">{totalItems}</p>
         </div>
         <div className="center-wrapper">
           <p className="our-products">Our products:</p>

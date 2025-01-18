@@ -11,7 +11,7 @@ const Cart = () => {
         <p className="your-products">Your products:</p>
         {cart.length === 0 ? (
           <div className="empty-wrapper">
-            <p></p>
+            <p>Your Cart is Empty</p>
           </div>
         ) : (
           <ul className="cart-list">

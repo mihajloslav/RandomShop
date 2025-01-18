@@ -1,0 +1,25 @@
+:root {
+  --base-card-size: 223px;
+  --card-min-scale: 0.8;
+  --card-max-scale: 1.5;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .shop-body {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}

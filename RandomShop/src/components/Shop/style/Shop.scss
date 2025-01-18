@@ -16,7 +16,7 @@
   left: 20px;
   margin-right: 20px;
   background-color: #00932c;
-  width: 97px;
+  min-width: 97px;
   height: 57px;
   border-radius: 5%;
   display: flex;
@@ -51,6 +51,9 @@
   padding: 21px;
   border-radius: 15px;
   background-color: #620000;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(calc(0.8 * var(--base-card-size)), 1fr)
+  );
   gap: 20px;
 }

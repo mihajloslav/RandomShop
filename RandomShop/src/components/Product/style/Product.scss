@@ -3,16 +3,23 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #500000;
-  width: 223px;
-  height: 300px;
+  width: clamp(
+    calc(var(--card-min-scale) * var(--base-card-size)),
+    100%,
+    calc(var(--card-max-scale) * var(--base-card-size))
+  );
+  max-width: 100%;
+  height: auto;
   border-radius: 8px;
   padding: 10px;
   text-align: center;
+  box-sizing: border-box;
 
   .product-image {
-    width: 200px;
-    height: 180px;
+    width: 100%;
+    height: auto;
     border-radius: 8px;
+    margin-bottom: 5px;
   }
 
   .product-name {
@@ -23,6 +30,7 @@
   .product-price {
     font-size: 13px;
     text-align: end;
+    margin-bottom: 35px;
   }
 
   .add-to-cart {
@@ -38,7 +46,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #f0a500;
+      background-color: #a00000;
       color: #fff;
     }
   }
